@@ -19,7 +19,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         name: Checkout
-      - uses: ./.github/actions/action-semantic-pull-request
+      - uses: .github/actions/action-semantic-pull-request
         env: 
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
