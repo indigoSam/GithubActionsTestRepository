@@ -17,9 +17,12 @@ jobs:
   check_pr_title_for_conventional_commit_format:
     runs-on: ubuntu-latest
     steps:
-      - run: echo $cwd
+      - run: pwd
+      - run: ls
       - uses: actions/checkout@v2
         name: Checkout
+      - run: pwd
+      - run: ls
       - uses: ./
         env: 
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
