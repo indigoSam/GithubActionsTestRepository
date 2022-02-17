@@ -14,7 +14,7 @@ on:
 
 
 jobs:
-  Check PR Title for Conventional Commit format:
+  check_pr_title_for_conventional_commit_format:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
