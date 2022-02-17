@@ -23,7 +23,7 @@ jobs:
         name: Checkout
       - run: pwd
       - run: ls -al
-      - uses: ./.github/actions/
+      - uses: ./.github/actions/action-semantic-pull-request
         env: 
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
