@@ -13,12 +13,13 @@ on:
       - 'indigoag/ads/**'
 
 
-# Let's have this first run on all "paths" -- even if indigoag.ads isn't published.
 jobs:
-  check_pr_title_conventional_commit:
+  Check PR Title for Conventional Commit format:
     runs-on: ubuntu-latest
     steps:
-      - uses: amannn/action-semantic-pull-request@v4
+      - uses: actions/checkout
+        name: Checkout
+      - uses: ./github/actions/action-semantic-pull-request
         env: 
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
