@@ -1,4 +1,4 @@
-name: indigoag.ads module preconditions
+name: SDK Module Preconditions
 # This workflow is intended to help ensure that PRs modifying indgoag.ads have a PR Title that will later be converted to a
 # required conventional-commit-formatted squashed commit message for use in circleci workflows that publish the package to codeartifact
 on: 
@@ -7,10 +7,8 @@ on:
       - opened
       - edited
       - synchronize
-    branches-ignore:
-      - develop
-      - master
-      - main  # This is the one in my current repository that's erving as a default branch.
+    branches:
+      - main
 
 # Let's have this first run on all "paths" -- even if indigoag.ads isn't published.
 jobs:
