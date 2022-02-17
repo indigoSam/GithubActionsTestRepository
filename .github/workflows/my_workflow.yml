@@ -6,7 +6,6 @@ on: workflow_dispatch
 jobs:
   DummyJob:
     runs-on: ubuntu-latest
-    uses:
     steps:
       - name: DummyStep
         run: echo "Dummy Step Ran"
