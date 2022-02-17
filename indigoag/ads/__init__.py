@@ -1,0 +1,1 @@
+# This is a standin for the IndigoAg ADS module, generally.
