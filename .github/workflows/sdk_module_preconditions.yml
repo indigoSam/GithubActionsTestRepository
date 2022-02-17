@@ -19,8 +19,8 @@ jobs:
     steps:
       - run: pwd
       - run: ls
-      - uses: actions/checkout@v2
-        name: Checkout
+      - name: Checkout
+        uses: actions/checkout@v2
       - run: pwd
       - run: ls -al
       - uses: ./.github/actions/action-semantic-pull-request/action.yml
