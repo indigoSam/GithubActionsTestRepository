@@ -1,0 +1,23 @@
+name: indigoag.ads module preconditions
+# This workflow is intended to help ensure that PRs modifying indgoag.ads have a PR Title that will later be converted to a
+# required conventional-commit-formatted squashed commit message for use in circleci workflows that publish the package to codeartifact
+on: 
+  pull_request:
+    types:
+      - opened
+      - edited
+      - synchronize
+    branches-ignore:
+      - develop
+      - master
+      - main  # This is the one in my current repository that's erving as a default branch.
+
+# Let's have this first run on all "paths" -- even if indigoag.ads isn't published.
+jobs:
+  check_pr_title_conventional_commit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: amannn/action-semantic-pull-request@v4
+        env: 
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
