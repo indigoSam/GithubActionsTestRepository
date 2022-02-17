@@ -9,6 +9,9 @@ on:
       - synchronize
     branches:
       - main
+    paths:
+      - 'indigoag/ads/**'
+
 
 # Let's have this first run on all "paths" -- even if indigoag.ads isn't published.
 jobs:
