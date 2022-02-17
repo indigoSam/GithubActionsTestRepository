@@ -23,7 +23,7 @@ jobs:
         name: Checkout
       - run: pwd
       - run: ls
-      - uses: .github
+      - uses: .github/actions/
         env: 
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
