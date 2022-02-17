@@ -2,3 +2,4 @@
 # subdirectory. Any change to a file the indigoag.ads subdir should trigger the workflow.
 
 print("Cool, mroe work done here!")
+print("Change to teh SDK")
