@@ -17,6 +17,7 @@ jobs:
   check_pr_title_for_conventional_commit_format:
     runs-on: ubuntu-latest
     steps:
-      - uses: indigoSam/action-semantic-pull-request@master
+      # Could be: ./.github/actions/{directory_name}
+      - uses: ./.github/actions/action-semantic-pull-request-master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
