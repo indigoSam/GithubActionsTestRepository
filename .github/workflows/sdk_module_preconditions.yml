@@ -18,6 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # Could be: ./.github/actions/{directory_name}
+      - run: echo "Hi!"
       - uses: ./.github/actions/action-semantic-pull-request-master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
