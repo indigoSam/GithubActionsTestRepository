@@ -7,6 +7,7 @@ def do_the_app():
     print("Change to main app")
     print("Cange in the app")
     print("Change de app mon")
+    print("Change Main App")
 
 if __name__=="__main__":
     do_the_app()
